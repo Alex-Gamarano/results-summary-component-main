@@ -1,0 +1,245 @@
+:root {
+  font-size: 62.5%;
+  font-family: "Hanken Grotesk";
+
+  /*Colors*/
+
+  /*Primary*/
+  --lightRed: hsla(0, 100%, 67%);
+  --orangeyYellow: hsla(39, 100%, 50%);
+  --teal: hsl(166, 100%, 37%);
+  --cobalt: hsl(234, 85%, 45%);
+  /*Secondary*/
+  --lightRed-secondary: hsla(0, 100%, 67%, 10%);
+  --orangeyYellow-secondary: hsla(39, 100%, 50%, 10%);
+  --teal-secondary: hsl(166, 100%, 37%, 10%);
+  --cobalt-secondary: hsl(234, 85%, 45%, 10%);
+  /*Gradients*/
+  /*Background*/
+  --lightSlateBlue: hsl(252, 100%, 67%);
+  --lightRoyalBlue: hsl(241, 81%, 54%);
+  /*#Circle-Background*/
+  --violetBlue: hsla(256, 72%, 46%, 1);
+  --persianBlue: hsla(241, 72%, 46%, 0);
+  /*Neutral*/
+  --white: hsl(0, 0%, 100%);
+  --paleBlue: hsl(221, 100%, 96%);
+  --lightLavender: hsl(241, 100%, 89%);
+  --darkGrayBlue: hsl(224, 30%, 27%);
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+}
+h1 {
+  color: var(--lightLavender);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.circle {
+  background-image: linear-gradient(var(--violetBlue), var(--persianBlue));
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.result {
+  font-size: 5rem;
+  font-weight: 800;
+}
+.resText {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--lightLavender);
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.msg {
+  width: 66%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--lightLavender);
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+main {
+  box-shadow: 5px 3px 15px var(--cobalt-secondary);
+  width: 84%;
+}
+h3 {
+  font-size: 2rem;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+ul > li:nth-child(1) {
+  background-color: var(--lightRed-secondary);
+  color: var(--lightRed);
+}
+ul > li:nth-child(2) {
+  background-color: var(--orangeyYellow-secondary);
+  color: var(--orangeyYellow);
+}
+ul > li:nth-child(3) {
+  background-color: var(--teal-secondary);
+  color: var(--teal);
+}
+ul > li:nth-child(4) {
+  background-color: var(--cobalt-secondary);
+  color: var(--cobalt);
+}
+
+li > span:nth-child(2) {
+  color: var(--darkGrayBlue);
+  padding-right: 10px;
+}
+
+li {
+  margin: 7.5px 0;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 0 10px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.icon {
+  padding-left: 10px;
+  padding-right: 10px;
+  transform: translateY(20%);
+}
+.iconTxt {
+  transform: translateY(-10%);
+  font-weight: 800;
+}
+
+button {
+  display: block;
+  background-color: var(--darkGrayBlue);
+  color: var(--paleBlue);
+  border: none;
+  width: 100%;
+  height: 55px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 15px 0;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (width> 425px) {
+  body {
+    width: 70dvw;
+    margin: auto;
+  }
+}
+@media screen and (width> 768px) {
+  body {
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: center;
+    justify-content: center;
+    width: 870px;
+  }
+  header,
+  main {
+    width: 368px;
+    height: 512px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  main {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .circle {
+    height: 200px;
+    width: 200px;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  .result {
+    font-size: 7rem;
+  }
+  .resText {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+  .msg {
+    font-size: 1.7rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+
+  h3,
+  ul,
+  button {
+    width: 290px;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  li {
+    font-size: 1.7rem;
+  }
+
+  footer {
+    grid-area: 2 / 1 / span 2 / span 2;
+    transform: translateY(100px);
+  }
+}
